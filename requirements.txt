@@ -1,0 +1,8 @@
+# 两条改进方向都会用到的基础依赖。生成模型确定后再补充对应的包。
+datasets>=2.19
+faiss-cpu>=1.8
+sentence-transformers>=3.0
+python-dotenv>=1.0
+numpy>=1.26
+tqdm>=4.66
+PyYAML>=6.0
