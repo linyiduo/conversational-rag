@@ -1,8 +1,15 @@
-# 两条改进方向都会用到的基础依赖。生成模型确定后再补充对应的包。
-datasets>=2.19
+# 基础依赖。PyTorch 请单独装 cu121（驱动 CUDA 12.2，不要默认 cu130）：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# 与 torch 2.5.1+cu121 对齐的一组版本：
+huggingface-hub==0.26.5
+datasets==3.2.0
+transformers==4.46.3
+sentence-transformers==3.3.1
+accelerate==1.2.1
 faiss-cpu>=1.8
-sentence-transformers>=3.0
 python-dotenv>=1.0
 numpy>=1.26
 tqdm>=4.66
 PyYAML>=6.0
+pyarrow>=15.0

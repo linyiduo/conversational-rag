@@ -1,0 +1,22 @@
+# 默认超参备忘。scripts 读命令行参数，不读这个文件。
+# 各步含义见 docs/ 下的分步说明，命令见 docs/命令手册.md。
+data_root: data
+dataset: multidoc2dial
+split: validation
+
+embed_model: models/all-MiniLM-L6-v2
+llm_model: models/Qwen2.5-3B
+
+chunk_size: 512
+chunk_overlap: 64
+top_k: 5
+query_mode: question
+max_history_turns: 6
+
+# For qrecc / topiocqa full corpora are huge; limit while iterating.
+max_passages: null
+max_examples: 20
+
+device: cuda
+batch_size: 64
+max_new_tokens: 128
